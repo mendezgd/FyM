@@ -2,5 +2,7 @@ body {
     overflow-x: hidden;
     font-family: 'Roboto Condensed', sans-serif;
     margin: 0;
-    
+
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&family=Roboto+Slab:wght@200&family=Teko:wght@500&display=swap');

@@ -8,6 +8,9 @@ const Header = () => {
             <div className="background-image-container">
                 <div className="background-image"></div>
                 <div className="overlay"></div>
+                <div className="text-container">
+                    <h1>FyM Sanitarios</h1>
+                </div>
             </div>
         </>
     );
