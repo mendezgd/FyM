@@ -9,7 +9,7 @@ const Header = () => {
                 <div className="background-image"></div>
                 <div className="overlay"></div>
                 <div className="text-container">
-                    <h1>FyM Sanitarios</h1>
+                    <h1 className="titulo">FyM Sanitarios</h1>
                 </div>
             </div>
         </>

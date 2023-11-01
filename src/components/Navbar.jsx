@@ -1,20 +1,11 @@
-import React, { useState } from 'react';
+
 import './Navbar.css';
 
-function Navbar() {
-    const [menuOpen, setMenuOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
+const Navbar = () => {
 
     return (
         <>
-            <nav className={`navbar ${menuOpen ? 'open' : ''}`}>
-                <div className="background">
-                    <button className='hamburger' onClick={toggleMenu}>
-                        &#9776;
-                    </button>
+            <nav className='navbar'>
                     <ul className='items'>
                         <li>
                             <button className='navButton'><a href='#'>Inicio</a></button>
@@ -26,10 +17,9 @@ function Navbar() {
                             <button className='navButton'><a href='#'>Contacto</a></button>
                         </li>
                     </ul>
-                </div>
             </nav>
         </>
     );
 }
-
 export default Navbar;
+

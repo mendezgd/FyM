@@ -1,0 +1,9 @@
+.animate-me {
+    transition: transform 2s ease;
+    transform: translateX(-100px);
+}
+
+.animate {
+    transform: translateX(40rem);
+}
+

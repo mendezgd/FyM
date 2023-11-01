@@ -36,3 +36,8 @@
     font-size: 32px;
     font-family: 'Roboto Slab', serif;
 }
+
+
+.titulo {
+    animation-direction: normal;
+}
