@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #121212;
+    background-color: #eef3ff;
     height: 3.5rem;
 }
 
@@ -22,13 +22,14 @@
 
 .items li a {
     text-decoration: none;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: bold;
-    color: #6d6d6d;
+    font-family: 'Teko', sans-serif;
+    font-size: large;
+    color: #3b3ac8;
+    font-weight: 200;
 }
 
 .items li a:hover {
-    color: #e7e7e7;
+    color: #6571ef;
     transition: 0.5s;
 }
 
@@ -51,7 +52,7 @@
     content: '';
     width: 0%;
     height: 2px;
-    background: #f44336;
+    background: #3b3ac8;
     display: block;
     transition: 0.5s;
 }
@@ -63,7 +64,7 @@
 }
 
 .navButton:hover {
-    color: #e7e7e7;
+    color: #6571ef;
     transition: 1s;
 }
 

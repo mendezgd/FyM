@@ -1,18 +1,18 @@
 import React from "react";
+import Carousel from "./Carousel";
 import "./Header.css";
 
 const Header = () => {
-
+    const images = [
+        '/fym1.jpeg',
+        '/fym2.jpeg',
+        '/fym3.jpeg',
+    ];
+    
     return (
-        <>
-            <div className="background-image-container">
-                <div className="background-image"></div>
-                <div className="overlay"></div>
-                <div className="text-container">
-                    <h1 className="titulo">FyM Sanitarios</h1>
-                </div>
-            </div>
-        </>
+        <div>
+            <Carousel images={images} />
+        </div>
     );
 }
 

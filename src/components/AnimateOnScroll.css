@@ -1,5 +1,5 @@
 .animate-me {
-    transition: transform 2s ease;
+    transition: transform 1s ease;
     transform: translateX(-100px);
 }
 
