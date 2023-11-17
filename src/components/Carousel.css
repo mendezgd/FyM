@@ -35,7 +35,8 @@
   /* Estilos específicos para dispositivos móviles usando una media query */
   @media (max-width: 768px) {
     .carousel img {
-      max-height:80%; /* Ajustar la altura máxima de las imágenes para dispositivos móviles */
+      max-height: fit-content;
     }
+    
   }
   
