@@ -98,7 +98,7 @@ button:active:before {
 }
 
 .map {
-    
+    display: flex;
     width: 50%;
 }
 
@@ -113,6 +113,6 @@ button:active:before {
 
     .map {
         display: flex;
-        max-width: 100%;
+        width: 100%;
     }
 }
