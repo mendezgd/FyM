@@ -6,7 +6,7 @@ const Header = () => {
 
     return (
         <div className="header">
-            <Card />
+            <img className="canios" src="./plomeria.jpeg" alt="caños" />
         </div>
     );
 }
