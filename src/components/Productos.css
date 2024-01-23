@@ -1,42 +1,44 @@
 .carouselProd {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.carouselProd img {
+  max-width: 15rem;
+  max-height: 15rem;
+}
+
+.carouselProd-button {
+  position: absolute;
+  top: 50%;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #e0e9ff;
+
+}
+
+.carousel-button:first-child {
+  left: 8rem;
+}
+
+.carousel-button:last-child {
+  right: 8rem;
+}
+
+@media (max-width: 768px) {
+  .carousel img {
+    height: auto;
+    max-height: 600px;
+    width: auto;
   }
-  
-  .carouselProd img {
-    max-width: 100%;
-    max-height: 10rem;
-  }
-  
-  .carouselProd-button {
-    position: absolute;
-    top: 50%;
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #e0e9ff;
-  
-  }
-  
-  .carousel-button:first-child {
-    left: 10px;
-  }
-  
-  .carousel-button:last-child {
-    right: 10px;
-  }
-  
-  @media (max-width: 768px) {
-    .carousel img {
-      height: auto;
-      max-height: 600px;
-      width: auto;
-    }
-  }
-  
+}

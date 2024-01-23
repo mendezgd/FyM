@@ -9,9 +9,9 @@ function App() {
   return (
     <>
       <Navbar />
+      <Header />
       <Carousel />
       <Formulario />
-      <Header />
       <Productos />
     </>
   )

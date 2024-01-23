@@ -16,7 +16,7 @@ function Productos() {
         './valmec.webp',
 
     ];
-    const imagesToShow = 3;
+    const imagesToShow = 4;
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -39,7 +39,7 @@ function Productos() {
     };
 
     return (
-        <div className="carouselProd">
+        <div className="carouselProd" id='productos'>
             <button className="carousel-button" onClick={goToPreviousImage}>
                 &lt;
             </button>

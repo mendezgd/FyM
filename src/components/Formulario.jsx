@@ -19,11 +19,10 @@ function Formulario() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Aquí puedes agregar el código para manejar los datos del formulario, como enviarlos a un servidor o mostrarlos en la consola.
-        console.log(formData);
     };
 
     return (
-        <div className='contacto'>
+        <div className='contacto' id='contacto'>
             <form className='form-container' onSubmit={handleSubmit}>
                 <h2>Contacto</h2>
                 <div className='form-group'>

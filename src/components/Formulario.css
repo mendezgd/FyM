@@ -93,13 +93,22 @@ button:active:before {
 
 .contacto {
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+    width: 100%;
+    height: 720px;
+    /* Create View Timeline */
+    view-timeline-name: --canios;
+    view-timeline-axis: block;
+
+    /* Attach animation, linked to the  View Timeline */
+    animation: linear reveal both;
+    animation-timeline: --canios;
+
+    /* Tweak range when effect should run*/
+    animation-range: entry 25% cover 50%;
 }
-
-
 
 @media (max-width: 768px) {
     .form-container {
@@ -126,5 +135,17 @@ button:active:before {
         display: flex;
         width: 100%;
         margin: 5px;
+    }
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        clip-path: inset(45% 20% 45% 20%);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0% 0% 0% 0%);
     }
 }

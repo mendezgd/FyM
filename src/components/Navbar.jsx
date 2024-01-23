@@ -13,10 +13,10 @@ const Navbar = () => {
                         <button className='navButton'><a href='/'>Inicio</a></button>
                     </li>
                     <li>
-                        <button className='navButton'><a href='#'>Productos</a></button>
+                        <button className='navButton'><a href='#productos'>Productos</a></button>
                     </li>
                     <li>
-                        <button className='navButton'><a href='#'>Contacto</a></button>
+                        <button className='navButton'><a href='#contacto'>Contacto</a></button>
                     </li>
                 </ul>
             </nav>
@@ -24,4 +24,3 @@ const Navbar = () => {
     );
 }
 export default Navbar;
-
