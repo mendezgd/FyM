@@ -1,18 +1,16 @@
 import './App.css'
 import Navbar from './components/Navbar';
-import Formulario from './components/Formulario';
 import Productos from './components/Productos';
 import Header from './components/Header';
-import Card from './components/Card';
 import Mapa from './components/Mapa';
+import Body from './components/Body';
 
 function App() {
   return (
     <>
       <Navbar />
       <Header />
-      <Card />
-      <Formulario />
+      <Body />
       <Productos />
       {/* <Mapa /> */}
     </>
