@@ -16,6 +16,8 @@ function Productos() {
     ];
     const imagesToShow = 4;
     const [currentImages, setCurrentImages] = useState(images.slice(0, imagesToShow));
+    const [fadeIn, setFadeIn] = useState(false);
+
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -32,20 +34,25 @@ function Productos() {
     }, [currentImages, images]);
 
     const goToNextImage = () => {
+        setFadeIn(false);
         const newImages = currentImages.map((image, index) => {
             const newIndex = (images.indexOf(image) + 1) % images.length;
             return images[newIndex];
         });
         setCurrentImages(newImages);
+        setFadeIn(true);
     };
 
     const goToPreviousImage = () => {
+        setFadeIn(false);
         const newImages = currentImages.map((image, index) => {
             const newIndex = (images.indexOf(image) - 1 + images.length) % images.length;
             return images[newIndex];
         });
         setCurrentImages(newImages);
+        setFadeIn(true);
     };
+
 
     return (
         <div className="carouselProd" id='productos'>
@@ -53,7 +60,7 @@ function Productos() {
                 &lt;
             </button>
             {currentImages.map((image, index) => (
-                <img key={index} src={image} alt={`Image ${index}`} />
+                <img key={index} src={image} alt={`Image ${index}`} className={fadeIn ? "fade-in" : ""} />
             ))}
             <button className="carousel-button" onClick={goToNextImage}>
                 &gt;
