@@ -1,75 +1,44 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Productos.css';
 
 function Productos() {
     const images = [
-        './alarsa.webp',
-        './aqualaf.webp',
-        './delta.webp',
-        './duke.webp',
-        './gali.webp',
-        './peirano.webp',
-        './pileta.webp',
-        './saiar.webp',
-        './tigre.webp',
-        './valmec.webp',
+        { src: './alarsa.webp', href: 'https://alarsa.com.ar/' },
+        { src: './aqualaf.webp', href: 'https://www.aqualaf.com.ar/' },
+        { src: './delta.webp', href: 'https://www.fymsanitarios.com/' },
+        { src: './duke.webp', href: 'https://www.dukeargentina.com/' },
+        { src: './gali.webp', href: 'https://www.fymsanitarios.com/' },
+        { src: './peirano.webp', href: 'https://griferiapeirano.com/' },
+        { src: './pileta.webp', href: 'https://mipileta.com.ar/' },
+        { src: './saiar.webp', href: 'https://saiar.com.ar/home' },
+        { src: './tigre.webp', href: 'https://www.tigre.com.ar/' },
+        { src: './valmec.webp', href: 'https://valmec.com.ar/' }
     ];
     const imagesToShow = 4;
-    const [currentImages, setCurrentImages] = useState(images.slice(0, imagesToShow));
-    const [fadeIn, setFadeIn] = useState(false);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            const newImages = currentImages.map((image, index) => {
-                const newIndex = (images.indexOf(image) + 1) % images.length;
-                return images[newIndex];
-            });
-            setCurrentImages(newImages);
-        }, 3500);
-
-        return () => {
-            clearInterval(intervalId);
-        };
-    }, [currentImages, images]);
-
-    const goToNextImage = () => {
-        setFadeIn(false);
-        const newImages = currentImages.map((image, index) => {
-            const newIndex = (images.indexOf(image) + 1) % images.length;
-            return images[newIndex];
-        });
-        setCurrentImages(newImages);
-        setFadeIn(true);
+    const goToNextImages = () => {
+        setCurrentImageIndex((currentImageIndex + imagesToShow) % images.length);
     };
 
-    const goToPreviousImage = () => {
-        setFadeIn(false);
-        const newImages = currentImages.map((image, index) => {
-            const newIndex = (images.indexOf(image) - 1 + images.length) % images.length;
-            return images[newIndex];
-        });
-        setCurrentImages(newImages);
-        setFadeIn(true);
+    const goToPreviousImages = () => {
+        setCurrentImageIndex((currentImageIndex - imagesToShow + images.length) % images.length);
     };
-
 
     return (
         <div className="carouselProd" id='productos'>
-            <button className="carousel-button" onClick={goToPreviousImage}>
-                &lt;
-            </button>
-            {currentImages.map((image, index) => (
-                <img key={index} src={image} alt={`Image ${index}`} className={fadeIn ? "fade-in" : ""} />
+            <button className='carousel-button' onClick={goToPreviousImages}>&lt;</button>
+            {images.slice(currentImageIndex, currentImageIndex + imagesToShow).map((image, index) => (
+                <a key={index} href={image.href} target="_blank" rel="noopener noreferrer">
+                    <img src={image.src} alt="" />
+                </a>
             ))}
-            <button className="carousel-button" onClick={goToNextImage}>
-                &gt;
-            </button>
+            <button className='carousel-button' onClick={goToNextImages}>&gt;</button>
             <div className="carousel-indicators">
-                {images.map((image, index) => (
+                {Array(Math.ceil(images.length / imagesToShow)).fill().map((_, index) => (
                     <div
                         key={index}
-                        className={`carousel-indicator ${currentImages.includes(image) ? 'active' : ''}`}
+                        className={`carousel-indicator ${Math.floor(currentImageIndex / imagesToShow) === index ? 'active' : ''}`}
                     />
                 ))}
             </div>
