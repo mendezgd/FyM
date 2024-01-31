@@ -26,13 +26,22 @@
   transform: scale(1.1);
 }
 
-/* @media (max-width: 768px) {
-  .carousel img {
-    height: auto;
-    max-height: 600px;
-    width: auto;
+@media (max-width: 768px) {
+
+  .carouselProd {
+    width: 100%;
+    height: 20rem;
   }
-} */
+
+  .carouselProd img {
+    width: 100%;
+  }
+
+  .carouselProd button {
+    padding: 1rem;
+    font-size: 15px;
+  }
+}
 
 .carousel-button {
   display: inline-flex;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Productos.css';
 
 function Productos() {
@@ -14,8 +14,15 @@ function Productos() {
         { src: './tigre.webp', href: 'https://www.tigre.com.ar/' },
         { src: './valmec.webp', href: 'https://valmec.com.ar/' }
     ];
-    const imagesToShow = 4;
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 500);
+    const imagesToShow = isMobile ? 1 : 4;
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth <= 500);
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     const goToNextImages = () => {
         setCurrentImageIndex((currentImageIndex + imagesToShow) % images.length);
