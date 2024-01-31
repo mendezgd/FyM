@@ -16,27 +16,15 @@
 }
 
 .carouselProd img {
-  max-width: 15rem;
-  max-height: 15rem;
+  max-width: 13rem;
+  max-height: 30rem;
 }
 
-.carouselProd-button {
-  position: absolute;
-  top: 50%;
-  background-color: transparent;
+.carousel-button {
+  font-size: 3rem;
+  text-decoration: none;
+  background-color: white;
   border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #e0e9ff;
-
-}
-
-.carousel-button:first-child {
-  left: 8rem;
-}
-
-.carousel-button:last-child {
-  right: 8rem;
 }
 
 @media (max-width: 768px) {

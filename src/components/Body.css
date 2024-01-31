@@ -61,4 +61,5 @@ button:active:before {
     margin-bottom: 1rem;
     background-color: #bfddfe;
     padding: 2rem;
+    border-radius: 5px;
 }

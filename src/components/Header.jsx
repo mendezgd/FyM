@@ -4,6 +4,7 @@ import "./Header.css";
 const Header = () => {
     return (
         <div className="background-image-container">
+            <div id="top"></div>
             <div className="background-image"></div>
             <div className="overlay"></div>
             <div className="text-container">

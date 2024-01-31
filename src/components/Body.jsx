@@ -13,7 +13,7 @@ const Body = () => {
                     </div>
                 </div>
                 <div className="col-lg-5" >
-                    <form className="formulario">
+                    <form className="formulario" id="contacto">
                         <h4>Contacto</h4>
                         <p>Dejanos tu consulta detallada.</p>
                         <div className="row gy-3">

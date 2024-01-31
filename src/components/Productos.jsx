@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './Productos.css';
 
 function Productos() {
-    const [currentImage, setCurrentImage] = useState(0);
     const images = [
         './alarsa.webp',
         './aqualaf.webp',
@@ -14,28 +13,38 @@ function Productos() {
         './saiar.webp',
         './tigre.webp',
         './valmec.webp',
-
     ];
     const imagesToShow = 4;
+    const [currentImages, setCurrentImages] = useState(images.slice(0, imagesToShow));
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            // Avanzar al siguiente índice de imagen
-            setCurrentImage((currentImage + 1) % (images.length - imagesToShow + 1));
-        }, 3500); // Cambia el intervalo a tu preferencia en milisegundos
+            const newImages = currentImages.map((image, index) => {
+                const newIndex = (images.indexOf(image) + 1) % images.length;
+                return images[newIndex];
+            });
+            setCurrentImages(newImages);
+        }, 3500);
 
         return () => {
-            // Limpiar el temporizador cuando el componente se desmonte
             clearInterval(intervalId);
         };
-    }, [currentImage, images]);
+    }, [currentImages, images]);
 
     const goToNextImage = () => {
-        setCurrentImage((currentImage + 1) % (images.length - imagesToShow + 1));
+        const newImages = currentImages.map((image, index) => {
+            const newIndex = (images.indexOf(image) + 1) % images.length;
+            return images[newIndex];
+        });
+        setCurrentImages(newImages);
     };
 
     const goToPreviousImage = () => {
-        setCurrentImage((currentImage - 1 + (images.length - imagesToShow + 1)) % (images.length - imagesToShow + 1));
+        const newImages = currentImages.map((image, index) => {
+            const newIndex = (images.indexOf(image) - 1 + images.length) % images.length;
+            return images[newIndex];
+        });
+        setCurrentImages(newImages);
     };
 
     return (
@@ -43,12 +52,20 @@ function Productos() {
             <button className="carousel-button" onClick={goToPreviousImage}>
                 &lt;
             </button>
-            {images.slice(currentImage, currentImage + imagesToShow).map((image, index) => (
-                <img key={index} src={image} alt={`Image ${currentImage + index}`} />
+            {currentImages.map((image, index) => (
+                <img key={index} src={image} alt={`Image ${index}`} />
             ))}
             <button className="carousel-button" onClick={goToNextImage}>
                 &gt;
             </button>
+            <div className="carousel-indicators">
+                {images.map((image, index) => (
+                    <div
+                        key={index}
+                        className={`carousel-indicator ${currentImages.includes(image) ? 'active' : ''}`}
+                    />
+                ))}
+            </div>
         </div>
     );
 }
