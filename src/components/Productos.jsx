@@ -32,6 +32,13 @@ function Productos() {
         setCurrentImageIndex((currentImageIndex - imagesToShow + images.length) % images.length);
     };
 
+    const delay = 3000; // Retraso entre cambios de imagen en milisegundos
+
+    useEffect(() => {
+        const timer = setInterval(goToNextImages, delay);
+        return () => clearInterval(timer); // Limpia el intervalo cuando el componente se desmonta
+    }, [currentImageIndex, goToNextImages]); // Dependencia en currentImageIndex y goToNextImages para reiniciar el temporizador cuando cambia la imagen
+
     return (
         <div className="carouselProd" id='productos'>
             <button className='carousel-button' onClick={goToPreviousImages}>&lt;</button>
