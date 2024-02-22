@@ -21,7 +21,7 @@ function Navbar() {
                             <a className="nav-link" href="#contacto">Contacto</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#map">Dónde estamos?</a>
+                            <a className="nav-link" href="#donde">Dónde estamos?</a>
                         </li>
                     </ul>
                 </div>

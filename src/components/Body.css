@@ -48,14 +48,12 @@ button:active:before {
 
 .cardTitle {
     font-weight: bold;
-    font-family: 'Roboto Condensed';
     font-size: 36px;
-
 }
 
 .barrita2 {
     font-size: 3rem;
-
+    color: #85bcf9;
 }
 
 .formulario {
@@ -64,11 +62,13 @@ button:active:before {
     background-color: #bfddfe;
     padding: 2rem;
     border-radius: 5px;
-
 }
 
-.gorrito {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 3rem;
+.svgSoporte {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.atencion {
+    margin-top: 1rem;
 }

@@ -3,7 +3,7 @@ import './Productos.css';
 
 function Productos() {
     const images = [
-        { src: './alarsa.webp', href: 'https://alarsa.com.ar/'},
+        { src: './alarsa.webp', href: 'https://alarsa.com.ar/' },
         { src: './aqualaf.webp', href: 'https://www.aqualaf.com.ar/' },
         { src: './delta.webp', href: 'https://www.fymsanitarios.com/' },
         { src: './duke.webp', href: 'https://www.dukeargentina.com/' },
@@ -40,21 +40,23 @@ function Productos() {
     }, [currentImageIndex, goToNextImages]); // Dependencia en currentImageIndex y goToNextImages para reiniciar el temporizador cuando cambia la imagen
 
     return (
-        <div className="carouselProd" id='productos'>
-            <button className='carousel-button' onClick={goToPreviousImages}>&lt;</button>
-            {images.slice(currentImageIndex, currentImageIndex + imagesToShow).map((image, index) => (
-                <a key={index} href={image.href} target="_blank" rel="noopener noreferrer">
-                    <img src={image.src} alt="" />
-                </a>
-            ))}
-            <button className='carousel-button' onClick={goToNextImages}>&gt;</button>
-            <div className="carousel-indicators">
-                {Array(Math.ceil(images.length / imagesToShow)).fill().map((_, index) => (
-                    <div
-                        key={index}
-                        className={`carousel-indicator ${Math.floor(currentImageIndex / imagesToShow) === index ? 'active' : ''}`}
-                    />
+        <div id='productos'>
+            <div className="carouselProd">
+                <button className='carousel-button' onClick={goToPreviousImages}>&lt;</button>
+                {images.slice(currentImageIndex, currentImageIndex + imagesToShow).map((image, index) => (
+                    <a key={index} href={image.href} target="_blank" rel="noopener noreferrer">
+                        <img src={image.src} alt="" />
+                    </a>
                 ))}
+                <button className='carousel-button' onClick={goToNextImages}>&gt;</button>
+                <div className="carousel-indicators">
+                    {Array(Math.ceil(images.length / imagesToShow)).fill().map((_, index) => (
+                        <div
+                            key={index}
+                            className={`carousel-indicator ${Math.floor(currentImageIndex / imagesToShow) === index ? 'active' : ''}`}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );
