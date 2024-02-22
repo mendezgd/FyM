@@ -3,7 +3,7 @@ import './Body.css';
 
 const Body = () => {
     return (
-        <div className="container">
+        <div className="container" id="contacto">
             <div className="row justify-content-between gy-4">
                 <div className="col-lg-6 d-flex align-items-center">
                     <div className="content">
@@ -13,7 +13,7 @@ const Body = () => {
                     </div>
                 </div>
                 <div className="col-lg-5" >
-                    <form className="formulario" id="contacto">
+                    <form className="formulario">
                         <h4>Contacto</h4>
                         <p>Dejanos tu consulta detallada.</p>
                         <div className="row gy-3">
