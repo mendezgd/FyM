@@ -3,7 +3,7 @@ import './Productos.css';
 
 function Productos() {
     const images = [
-        { src: './alarsa.webp', href: 'https://alarsa.com.ar/' },
+        { src: './alarsa.webp', href: 'https://alarsa.com.ar/'},
         { src: './aqualaf.webp', href: 'https://www.aqualaf.com.ar/' },
         { src: './delta.webp', href: 'https://www.fymsanitarios.com/' },
         { src: './duke.webp', href: 'https://www.dukeargentina.com/' },

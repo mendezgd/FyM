@@ -6,6 +6,13 @@
     min-height: 92vh;
 }
 
+@media (max-width: 600px) {
+    .background-image {
+        background-size: 50%;
+    }
+}
+
+
 .sanitarios {
     color: #bfddfe;
 }
@@ -17,7 +24,7 @@
     width: 100%;
     height: 100%;
     background-image: url('/fym1.webp');
-    background-size: auto;
+    background-size: cover;
     background-position: center;
     animation: fadein 2s;
 }
