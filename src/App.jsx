@@ -4,6 +4,7 @@ import Productos from './components/Productos';
 import Header from './components/Header';
 import Mapa from './components/Mapa';
 import Body from './components/Body';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Body />
       <Productos />
       <Mapa />
+      <Footer />
     </>
   )
 }

@@ -24,11 +24,11 @@
 }
 
 .nav-item a {
-    text-decoration: none;
     font-family: 'Teko', sans-serif;
     font-size: larger;
     color: black;
     font-weight: normal;
+    font-weight: 500;
 }
 
 .nav-link::before {

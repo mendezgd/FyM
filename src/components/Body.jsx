@@ -26,9 +26,11 @@ const Body = () => {
                             <div className="col-md-12 ">
                                 <input type="email" className="form-control" name="email" placeholder="Email" required="" />
                             </div>
+
                             <div className="col-md-12">
                                 <textarea className="form-control" name="mensaje" rows="6" placeholder="Mensaje" required=""></textarea>
                             </div>
+                            <div id='productos'></div>
                             <div className="col-md-12 text-center">
                                 <div className="error-message"></div>
                                 <button className='submit' type="submit">Enviar</button>

@@ -40,7 +40,7 @@ function Productos() {
     }, [currentImageIndex, goToNextImages]); // Dependencia en currentImageIndex y goToNextImages para reiniciar el temporizador cuando cambia la imagen
 
     return (
-        <div id='productos'>
+        
             <div className="carouselProd">
                 <button className='carousel-button' onClick={goToPreviousImages}>&lt;</button>
                 {images.slice(currentImageIndex, currentImageIndex + imagesToShow).map((image, index) => (
@@ -58,7 +58,6 @@ function Productos() {
                     ))}
                 </div>
             </div>
-        </div>
     );
 }
 

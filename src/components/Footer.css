@@ -1,0 +1,21 @@
+.footer {
+    background-color: #dbebfe;
+}
+
+.navItemFooter {
+    font-family: 'Teko', sans-serif;
+    font-size: larger;
+    margin-bottom: 2px;
+    text-decoration: none;
+    color: #3b86f6;
+}
+
+
+.navItemFooter:hover {
+    color: black;
+}
+
+
+.footerTitle {
+    font-weight: 600;
+}
