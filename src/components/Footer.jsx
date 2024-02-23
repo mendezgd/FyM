@@ -48,7 +48,7 @@ const Footer = () => {
                     </div>
                     <div className="col-6 col-lg-2 mb-3">
                         <a href="http://qr.afip.gob.ar/?qr=J1bWr3ey9w04iYRnN4HQMA,," target="_F960AFIPInfo">
-                            <img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" width="50" height="70" border="0" />
+                            <img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" width="50" height="70" border="0" alt="Afip"/>
                         </a>
                     </div>
                 </div>
