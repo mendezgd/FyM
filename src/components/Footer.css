@@ -8,12 +8,12 @@
     margin-bottom: 2px;
     margin-right: 3px;
     text-decoration: none;
-    color: #2568eb;
-
+    color: #000000;
+    font-weight: 400;
 }
 
 .navItemFooter:hover {
-    color: black;
+    color: #2568eb;
 }
 
 .footerTitle {
