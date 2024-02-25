@@ -3,7 +3,7 @@
     position: sticky;
     left: 0;
     top: 0;
-    z-index: 1;
+    z-index: 9999;
     animation: navbar-cheta linear both;
     animation-timeline: scroll(root);
 }

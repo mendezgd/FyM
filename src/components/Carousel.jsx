@@ -7,25 +7,25 @@ function Carousel() {
     <div id="carouselExampleAutoplaying" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
       <div className="carousel-inner">
         <div className="carousel-item active primero">
-          <img src="./fym1.webp" className="d-block w-100" alt="Imagenes del local" />
+          <img src="./fym1.webp" className="d-block w-100 imgCarousel" alt="Imagenes del local" />
           <div className="carousel-dark-overlay"></div>
-          <div className="carousel-caption d-none d-md-block">
+          <div className="carousel-caption d-md-block">
             <Hero />
           </div>
 
         </div>
         <div className="carousel-item">
-          <img src="./fym2.jpeg" className="d-block w-100" alt="Imagenes del local" />
+          <img src="./fym2.webp" className="d-block w-100 imgCarousel" alt="Imagenes del local" />
           <div className="carousel-dark-overlay"></div>
-          <div className="carousel-caption d-none d-md-block">
+          <div className="carousel-caption d-md-block">
             <Hero />
           </div>
           
         </div>
         <div className="carousel-item">
-          <img src="./fym3.jpeg" className="d-block w-100" alt="Imagenes del local" />
+          <img src="./fym3.webp" className="d-block w-100 imgCarousel" alt="Imagenes del local" />
           <div className="carousel-dark-overlay"></div>
-          <div className="carousel-caption d-none d-md-block">
+          <div className="carousel-caption d-md-block">
             <Hero />
           </div>
           

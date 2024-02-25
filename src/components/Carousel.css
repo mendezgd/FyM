@@ -4,7 +4,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 @keyframes fadein {
@@ -21,4 +21,10 @@
     top: 50%;
     transform: translateY(-50%);
     bottom: initial;
-  }
+}
+
+.imgCarousel {
+    height: 55rem;
+    object-fit: cover;
+
+}
