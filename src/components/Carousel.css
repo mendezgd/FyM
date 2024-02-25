@@ -32,3 +32,9 @@
 .carousel-inner {
     animation: fadein 1s;
 }
+
+@media screen and (max-width: 600px) {
+    .carousel-inner {
+        animation: fadein 0.2s;
+    }
+}
