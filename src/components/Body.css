@@ -1,5 +1,5 @@
 .submit {
-    --color: #3b3ac8;
+    color: #3b3ac8;
     font-family: inherit;
     display: inline-block;
     width: 8em;
@@ -14,7 +14,6 @@
     font-size: 17px;
     border-radius: 6px;
     font-weight: 500;
-    color: var(--color);
 }
 
 .submit:before {
