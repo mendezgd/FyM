@@ -12,7 +12,6 @@ function Carousel() {
           <div className="carousel-caption d-md-block">
             <Hero />
           </div>
-
         </div>
         <div className="carousel-item">
           <img src="./fym2.webp" className="d-block w-100 imgCarousel" alt="Imagenes del local" />
@@ -20,7 +19,6 @@ function Carousel() {
           <div className="carousel-caption d-md-block">
             <Hero />
           </div>
-          
         </div>
         <div className="carousel-item">
           <img src="./fym3.webp" className="d-block w-100 imgCarousel" alt="Imagenes del local" />
@@ -28,7 +26,6 @@ function Carousel() {
           <div className="carousel-caption d-md-block">
             <Hero />
           </div>
-          
         </div>
       </div>
       <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
