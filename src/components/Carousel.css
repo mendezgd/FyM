@@ -37,4 +37,8 @@
     .carousel-inner {
         animation: fadein 0.2s;
     }
+    .imgCarousel {
+        height: 48rem;
+        object-fit: cover;
+    }
 }
