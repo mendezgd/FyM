@@ -32,12 +32,12 @@ function Productos() {
         setCurrentImageIndex((currentImageIndex - imagesToShow + images.length) % images.length);
     };
 
-    const delay = 3000; // Retraso entre cambios de imagen en milisegundos
+    const delay = 3000;
 
     useEffect(() => {
         const timer = setInterval(goToNextImages, delay);
-        return () => clearInterval(timer); // Limpia el intervalo cuando el componente se desmonta
-    }, [currentImageIndex, goToNextImages]); // Dependencia en currentImageIndex y goToNextImages para reiniciar el temporizador cuando cambia la imagen
+        return () => clearInterval(timer); 
+    }, [currentImageIndex, goToNextImages]);
 
     return (
 
@@ -45,7 +45,7 @@ function Productos() {
             <button className='carousel-button' onClick={goToPreviousImages}>&lt;</button>
             {images.slice(currentImageIndex, currentImageIndex + imagesToShow).map((image, index) => (
                 <a key={index} href={image.href} target="_blank" rel="noopener noreferrer">
-                    <img src={image.src} alt="" />
+                    <img src={image.src} alt="nombre de la marca" />
                 </a>
             ))}
             <button className='carousel-button' onClick={goToNextImages}>&gt;</button>

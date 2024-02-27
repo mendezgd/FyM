@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="container py-4 py-md-5 px-4 px-md-3">
                 <div className="row">
                     <div className="col-lg-3 mb-3">
-                        <a className="navbar-brand" href="/"><img src="./Logo.webp" alt="Logo" /></a>
+                        <a className="navbar-brand" href="/"><img src="./logo.webp" alt="Logo" /></a>
                         <span className="fs-5 m-2">FyM Sanitarios</span>
                         <ul className="list-unstyled small m-3">
                             <li className="mb-2 mt-4">© 2017 FYM Sanitarios SRL - Todos los derechos reservados</li>
