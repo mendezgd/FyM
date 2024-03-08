@@ -6,6 +6,7 @@ const Form = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [successMessage, setSuccessMessage] = useState('');
 
     const enviar = (e) => {
         e.preventDefault();
@@ -26,6 +27,7 @@ const Form = () => {
                 setName('');
                 setEmail('');
                 setMessage('');
+                setSuccessMessage('Gracias por tu mensaje, te responderemos a la brevedad!');
             }, (error) => {
                 console.log(error.text);
             });
@@ -50,6 +52,7 @@ const Form = () => {
                     <button className='submit' type="submit">Enviar</button>
                 </div>
             </div>
+            {successMessage && <p className="mensajeExito">{successMessage}</p>}
         </form>
     )
 }
