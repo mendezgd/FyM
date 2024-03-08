@@ -10,9 +10,9 @@ const Form = () => {
     const enviar = (e) => {
         e.preventDefault();
 
-        const serviceId = 'service_z2inwh5';
-        const templateId = 'template_1878k87';
-        const publicKey = 'hGCUKqWZ9BVyRqKR6';
+        const serviceId = 'service_7p9vney';
+        const templateId = 'template_3hvv7s7';
+        const publicKey = 'h2f7HANeBzZB5gjJJ';
 
         const templateParams = {
             from_name: name,
