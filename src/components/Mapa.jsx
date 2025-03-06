@@ -1,4 +1,3 @@
-import React from "react";
 import './Mapa.css';
 
 const Mapa = () => {
@@ -35,7 +34,7 @@ const Mapa = () => {
                             </svg>
                             <div className="card-body">
                                 <h5 className="card-title">Whatsapp</h5>
-                                <p className="card-text">15-6622-9213</p>
+                                <p className="card-text">11-7625-8842</p>
                             </div>
                         </div>
                     </div>

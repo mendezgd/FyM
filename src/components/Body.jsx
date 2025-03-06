@@ -1,4 +1,3 @@
-import React from "react";
 import './Body.css';
 import Form from './Form';
 

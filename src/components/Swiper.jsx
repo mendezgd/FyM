@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./Swiper.css";
 
 const Swiper = () => {
@@ -6,7 +6,7 @@ const Swiper = () => {
 
     useEffect(() => {
         if (swiperContainerRef.current && !swiperContainerRef.current.swiper) {
-            const swiper = new window.Swiper(swiperContainerRef.current, {
+            new window.Swiper(swiperContainerRef.current, {
                 // Optional parameters
                 direction: 'horizontal',
                 speed: 400,
@@ -31,19 +31,16 @@ const Swiper = () => {
                 },
 
                 breakpoints: {
-                    // when window width is >= 320px
                     320: {
                         slidesPerView: 1,
                         slidesPerGroup: 1,
                         spaceBetween: 10
                     },
-                    // when window width is >= 480px
                     480: {
                         slidesPerView: 2,
                         slidesPerGroup: 2,
                         spaceBetween: 20
                     },
-                    // when window width is >= 640px
                     640: {
                         slidesPerView: 4,
                         slidesPerGroup: 3,
@@ -77,7 +74,7 @@ const Swiper = () => {
                 <div className="swiper-scrollbar"></div>
             </div>
         </>
-    )
-}
+    );
+};
 
 export default Swiper;
